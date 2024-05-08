@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 
 class DataService {
-  void getWeather(String city) async {
+  getWeather(String city) async {
     //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
     final queryParameter = {
@@ -9,6 +9,7 @@ class DataService {
       'appid': '37011c80f32b7f4de55543ace3ff9caa'
     };
 
+    //Creates a new https URI from authority, path and query.
     final uri =
         Uri.https('api.openweathermap.org', 'data/2.5/weather', queryParameter);
 

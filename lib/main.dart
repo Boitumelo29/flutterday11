@@ -1,5 +1,6 @@
 // import 'package:day11_weather_app/data_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterday11/data_service.dart';
 
 // import 'models.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final _cityTextController = TextEditingController();
-  // final _dataService = DataService();
+  final _dataService = DataService();
 
   // WeatherResponse _response;
 
@@ -55,7 +56,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _search() async {
-    // final response = await _dataService.getWeather(_cityTextController.text);
+    final response = await _dataService.getWeather(_cityTextController.text);
     // setState(() => _response = response);
   }
 }
