@@ -21,7 +21,7 @@ class DataService {
     print(response.body);
     //jsonDecoder Provide the JSON String
     final json = jsonDecode(response.body);
-    return WeatherResponse(cityName: json);
+    return WeatherResponse(cityName: json, tempInfo: json, weatherInfo: json);
   }
 }
 
