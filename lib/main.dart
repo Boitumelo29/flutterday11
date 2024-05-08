@@ -59,6 +59,7 @@ class _MyAppState extends State<MyApp> {
     final response = await _dataService.getWeather(_cityTextController.text);
 
     print(response.cityName);
+    print(response.tempInfo);
     // setState(() => _response = response);
   }
 }
